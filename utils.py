@@ -84,7 +84,7 @@ def check_hosts_in_inventory(nr, hosts, summary_data):
                         f.write(line)
     print("\n")
     new_host_found = False
-    import ipdb
+
     for host in new_hosts:
         if host not in hosts.keys():
             new_host_found = True
@@ -302,18 +302,18 @@ def normalize_interface_type(interface_type: str) -> str:
 
 
 
-def fancy_pandas():
-    df = pd.DataFrame([vars(s) for s in self.conversions if s.symbol == asset])
+# def fancy_pandas():
+#     df = pd.DataFrame([vars(s) for s in self.conversions if s.symbol == asset])
 
-    # Conversions sheet Create row 1 column names
-    for column in df.columns:
-        column_index = df.columns.get_loc(column)
-        sheet.cell(row=3, column=column_index + 1, value=column)
+#     # Conversions sheet Create row 1 column names
+#     for column in df.columns:
+#         column_index = df.columns.get_loc(column)
+#         sheet.cell(row=3, column=column_index + 1, value=column)
     
-    # Conversions sheet Create rows
-    row = 5
-    for index, session in df.iterrows():
-        for column in df.columns:
-            column_index = df.columns.get_loc(column)
-            sheet.cell(row=row, column=column_index + 1, value=str(session[column]))
-        row += 1
+#     # Conversions sheet Create rows
+#     row = 5
+#     for index, session in df.iterrows():
+#         for column in df.columns:
+#             column_index = df.columns.get_loc(column)
+#             sheet.cell(row=row, column=column_index + 1, value=str(session[column]))
+#         row += 1
